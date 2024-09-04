@@ -17,6 +17,7 @@ app.post('/register', (req: Request, res: Response) => {
       username,
       password,
     },
+  });
 });
 
 // Endpoint untuk login user
