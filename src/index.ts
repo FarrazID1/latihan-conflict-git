@@ -10,7 +10,13 @@ app.use(express.json());
 app.post('/register', (req: Request, res: Response) => {
   const { username, password } = req.body;
   // Logika untuk register user
-  res.send('User registered');
+  // res.send('User registered');
+  res.status(201).json({
+    message: 'User registered',
+    data: {
+      username,
+      password,
+    },
 });
 
 // Endpoint untuk login user
